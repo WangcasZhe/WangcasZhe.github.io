@@ -42,7 +42,7 @@ tags : ["日记"]
 
 ```dataview
 LIST FROM ""
-WHERE file.cday = date("2024-12-04")
+WHERE file.cday = date("")
 ```
 
 ---
