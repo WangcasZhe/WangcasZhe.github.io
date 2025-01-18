@@ -47,7 +47,9 @@ languages:
 # ~~~~~~~~~
 # 主题的配置(基本上是)
 # ~~~~~~~~~
-paginate: 8 # 每页展示的文章数量
+pagination:
+  pagerSize: 8
+# 每页展示的文章数量
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
