@@ -1,6 +1,6 @@
 baseURL: "https://WangcasZhe.github.io/" # 主站的 URL
 title: WangcasZhe's Blog # 站点标题
-copyright: "[©2024 WangcasZhe's Blog](https://WangcasZhe.github.io/)" # 网站的版权声明，通常显示在页脚
+copyright: "[©2025 WangcasZhe's Blog](https://WangcasZhe.github.io/)" # 网站的版权声明，通常显示在页脚
 theme: PaperMod # 主题
 languageCode: zh-cn # 语言
 
@@ -44,14 +44,56 @@ languages:
           pageRef: about/
           weight: 21
 
-# https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
-outputs:
-  home:
-    - HTML # 生成的静态页面
-    - RSS # 这个其实无所谓
-    - JSON # necessary for search, 这里的配置修改好之后，一定要重新生成一下
+# ~~~~~~~~~
+# 主题的配置(基本上是)
+# ~~~~~~~~~
+paginate: 8 # 每页展示的文章数量
 
 params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  author: WangcasZhe
+  defaultTheme: white # 默认是暗色背景
+  ShowShareButtons: false # 关闭分享的按钮
+  ShowReadingTime: true # 展示预估的阅读时长
+  displayFullLangName: true # 展示全名
+  ShowPostNavLinks: true # 展示文章导航链接，就是下一页上一页的那个
+  ShowBreadCrumbs: false # 是否展示标题上方的面包屑
+  ShowCodeCopyButtons: true # 是否展示复制代码的按钮
+  ShowRssButtonInSectionTermList: true # RSS 相关
+  ShowAllPagesInArchive: true # 在归档页面展示所有的页面
+  ShowPageNums: true # 展示页面的页数
+  ShowToc: true # 展示文章详情页的目录
+  comments: true # 评论
+  images: [""] # 缺省的图片，比如，博客的封面
+  DateFormat: "2025-01-18" # 这个时间是作者自己写的，只能这样写
+# 首页的文章上方的一些信息
+  homeInfoParams:
+    # 首页的 profile 内容
+    Title: "你好呀👋"
+    # 首页的 profile 内容
+    Content: >
+      Welcome to my Blog! 挂上一个梯子可能会让访问更加顺畅。
+      <div>
+      ● 第一次建网站，有不足的地方请谅解
+      </div>
+      
+  socialIcons:
+  - name: github
+    title: Follow my Github
+    url: "https://github.com/WangcasZhe"
+  # - name: X
+  #   title: Follow my Twitter
+  #   url: "https://x.com/komorebi_233333"
+  # - name: Bilibili
+  #   title: 关注我的 B 站帐号
+  #   url: "https://space.bilibili.com/26586741"
+  # - name: Youtube
+  #   title: Follow my Youtube Channel
+  #   url: "https://www.youtube.com/@mikumiku-w9l"
+  # - name: Telegram
+  #   title: Contact Me
+  #   url: "https://t.me/WangcasZhe987"
   # 搜索
   fuseOpts:
       isCaseSensitive: false # 是否大小写敏感
@@ -63,10 +105,29 @@ params:
       # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
       keys: ["title", "permalink", "summary", "content"]
       includeMatches: true
-
-params:
+# https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
   assets:
+      favicon: "favicon.png"
+      favicon16x16: "favicon.png"
+      favicon32x32: "favicon.png"
+      apple_touch_icon: "favicon.png"
+      safari_pinned_tab: "favicon.png"
       disableHLJS: true
+  # 评论的设置
+  # giscus:
+  #   repo: "WangcasZhe/WangcasZhe.github.io"
+  #   repoId: "R_kgDONJ1RRg"
+  #   category: "Announcements"
+  #   categoryId: "DIC_kwDONJ1RRs4Cj8TA"
+  #   mapping: "pathname"
+  #   strict: "0"
+  #   reactionsEnabled: "1"
+  #   emitMetadata: "0"
+  #   inputPosition: "bottom"
+  #   lightTheme: "light"
+  #   darkTheme: "dark"
+  #   lang: "zh-CN"
+  #   crossorigin: "anonymous"
 markup:
   goldmark:
     renderer:
@@ -80,12 +141,8 @@ markup:
     # 这里设置 style 没用，得自己加 css
     # style: "github-dark"
     # style: monokai
-
-params:
-  # 设置网站的标签页的图标，即 favicon
-  assets:
-      favicon: "favicon.png"
-      favicon16x16: "favicon.png"
-      favicon32x32: "favicon.png"
-      apple_touch_icon: "favicon.png"
-      safari_pinned_tab: "favicon.png"
+outputs:
+  home:
+    - HTML # 生成的静态页面
+    - RSS # 这个其实无所谓
+    - JSON # necessary for search, 这里的配置修改好之后，一定要重新生成一下
