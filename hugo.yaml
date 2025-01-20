@@ -68,7 +68,7 @@ params:
   ShowToc: true # 展示文章详情页的目录
   comments: true # 评论
   images: [""] # 缺省的图片，比如，博客的封面
-  DateFormat: "2025-01-18" # 这个时间是作者自己写的，只能这样写
+  DateFormat: "2006-01-02" # 这个时间是作者自己写的，只能这样写
 # 首页的文章上方的一些信息
   homeInfoParams:
     # 首页的 profile 内容
@@ -87,9 +87,9 @@ params:
   # - name: X
   #   title: Follow my Twitter
   #   url: "https://x.com/komorebi_233333"
-  # - name: Bilibili
-  #   title: 关注我的 B 站帐号
-  #   url: "https://space.bilibili.com/26586741"
+  - name: Bilibili
+    title: 关注我的 B 站帐号
+    url: "https://space.bilibili.com/318892464?spm_id_from=333.1007.0.0"
   # - name: Youtube
   #   title: Follow my Youtube Channel
   #   url: "https://www.youtube.com/@mikumiku-w9l"
